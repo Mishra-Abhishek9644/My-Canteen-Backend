@@ -7,6 +7,7 @@ import userRoutes from "./routes/userRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import menuRoutes from "./routes/menuRoutes.js";
+import menuSeed from "./routes/menuSeed.js";
 
 // 🔥 You forgot these imports
 import feedbackRoutes from "./routes/feedbackRoutes.js";
@@ -24,7 +25,9 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/menu", menuRoutes);
 app.use("/api/feedback", feedbackRoutes);   // ✔ works now
-app.use("/api/messages", messageRoutes);    // ✔ works now
+app.use("/api/messages", messageRoutes); 
+app.use("/api/seed", menuSeed); 
+   // ✔ works now
 
 mongoose
   .connect(process.env.MONGO_URI)
