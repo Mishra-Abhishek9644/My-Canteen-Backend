@@ -18,6 +18,7 @@ router.get("/my-orders", verifyToken, getMyOrders);
 // Admin
 router.get("/all", verifyAdmin, getAllOrders);
 router.put("/:id/status", verifyAdmin, updateOrderStatus);
-router.put("/:id/cancel", verifyAdmin, cancelOrder);   // << NEW
+router.put("/:id/cancel", verifyAdmin, cancelOrder); 
+router.put("/:id/cancel", verifyToken, cancelOrder);  // << NEW
 
 export default router;

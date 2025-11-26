@@ -58,12 +58,18 @@ export const updateOrderStatus = async (req, res) => {
 // Cancel order
 export const cancelOrder = async (req, res) => {
   try {
-    const order = await Order.findByIdAndUpdate(
-      req.params.id,
-      { status: "cancelled" },
-      { new: true }
-    );
-    res.json(order);
+    const order = await Order.findById(req.params.id);
+
+    if (!order) return res.status(404).json({ message: "Order not found" });
+
+    if (order.status !== "Pending") {
+      return res.status(400).json({ message: "Only pending orders can be cancelled" });
+    }
+
+    order.status = "Cancelled";
+    await order.save();
+
+    res.json({ message: "Order cancelled", order });
   } catch {
     res.status(500).json({ message: "Cancel failed" });
   }
