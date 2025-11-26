@@ -5,9 +5,12 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
-import orderRoutes from "./routes/orderRoutes.js"
+import orderRoutes from "./routes/orderRoutes.js";
 import menuRoutes from "./routes/menuRoutes.js";
 
+// 🔥 You forgot these imports
+import feedbackRoutes from "./routes/feedbackRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 
 dotenv.config();
 
@@ -19,24 +22,16 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/orders", orderRoutes);
-app.use("/api/menu", menuRoutes);   // ← ADD THIS LINE
+app.use("/api/menu", menuRoutes);
+app.use("/api/feedback", feedbackRoutes);   // ✔ works now
+app.use("/api/messages", messageRoutes);    // ✔ works now
 
-
-// Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected Successfully"))
-  .catch((err) => console.error("❌ MongoDB Connection Failed:", err));
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("DB Failed:", err));
 
-// Test Route
-app.get("/", (req, res) => {
-  res.send("MyCanteen backend is running!");
-});
+app.get("/", (req, res) => res.send("MyCanteen backend is running!"));
 
-app.get("/debug/users", async (req, res) => {
-  const users = await mongoose.model("User").find();
-  res.json(users);
-});
-// Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(`🚀 Server Live on ${PORT}`));

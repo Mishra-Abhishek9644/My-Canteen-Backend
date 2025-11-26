@@ -40,19 +40,31 @@ export const getAllOrders = async (req, res) => {
   }
 };
 
-// Admin: Update order status
+// Update order (Ready, Preparing, Completed)
 export const updateOrderStatus = async (req, res) => {
   try {
-    const { status } = req.body;
-
+    const status = req.body.status.toLowerCase(); // << FIX
     const order = await Order.findByIdAndUpdate(
       req.params.id,
       { status },
       { new: true }
     );
+    res.json(order);
+  } catch {
+    res.status(500).json({ message: "Update failed" });
+  }
+};
 
-    res.json({ message: "Status updated", order });
-  } catch (error) {
-    res.status(500).json({ message: "Server error", error });
+// Cancel order
+export const cancelOrder = async (req, res) => {
+  try {
+    const order = await Order.findByIdAndUpdate(
+      req.params.id,
+      { status: "cancelled" },
+      { new: true }
+    );
+    res.json(order);
+  } catch {
+    res.status(500).json({ message: "Cancel failed" });
   }
 };
