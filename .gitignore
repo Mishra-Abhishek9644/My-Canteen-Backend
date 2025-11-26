@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+Backend/node_modules/
+
+# Environment files (NEVER upload these)
+.env
+Backend/.env
+
+# Logs & temp
+*.log
+npm-debug.log*
