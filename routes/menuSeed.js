@@ -72,7 +72,7 @@ router.get("/load", async (req, res) => {
 { name:"Coca-Cola (250ml)", price:35, category:"Drinks", image:"https://images.unsplash.com/photo-1613470208054-8c6c8f1dbd1c?auto=format&fit=crop&w=600&q=80", description:"Chilled coke bottle" },
 
 /* 🔥 COMBOS (12) */
-{ name:"Burger + Coke Combo", price:99, category:"Combo", image:"https://images.unsplash.com/photo-1613470208054-8c6c8f1dbd1c?auto=format&fit=crop&w=600&q=80" },
+{ name:"Burger + Coke Combo", price:99, category:"Combo", image:"https://www.google.com/imgres?imgurl=https://storage.googleapis.com/shy-pub/17132/1607348482423_SKU-0124_0.jpg&imgrefurl=https://yummy-momo.store.shoopy.in/products/veg-burger-large-friescoke-combo-SKU-0124&h=550&w=550&tbnid=s1ivYf5GcT2SQM&source=sa.im&usg=AI4_-kSnTrfPKicNDzB5jh4W6JuNQaNF7Q&vet=1&docid=hgXUkvNDHAG81M" },
 { name:"Pizza + Coke Combo", price:189, category:"Combo", image:"https://images.unsplash.com/photo-1576458085966-1b290a53ef54?auto=format&fit=crop&w=600&q=80" },
 { name:"Sandwich + Fries + Shake", price:179, category:"Combo", image:"https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" },
 { name:"Noodles + Manchurian Combo", price:159, category:"Combo", image:"https://images.unsplash.com/photo-1657298848319-5f889a4185c8?auto=format&fit=crop&w=600&q=80" },
