@@ -72,18 +72,20 @@ router.get("/load", async (req, res) => {
 { name:"Coca-Cola (250ml)", price:35, category:"Drinks", image:"https://images.unsplash.com/photo-1613470208054-8c6c8f1dbd1c?auto=format&fit=crop&w=600&q=80", description:"Chilled coke bottle" },
 
 /* 🔥 COMBOS (12) */
-{ name:"Burger + Coke Combo", price:99, category:"Combo", image:"https://www.google.com/imgres?imgurl=https://storage.googleapis.com/shy-pub/17132/1607348482423_SKU-0124_0.jpg&imgrefurl=https://yummy-momo.store.shoopy.in/products/veg-burger-large-friescoke-combo-SKU-0124&h=550&w=550&tbnid=s1ivYf5GcT2SQM&source=sa.im&usg=AI4_-kSnTrfPKicNDzB5jh4W6JuNQaNF7Q&vet=1&docid=hgXUkvNDHAG81M" },
-{ name:"Pizza + Coke Combo", price:189, category:"Combo", image:"https://images.unsplash.com/photo-1576458085966-1b290a53ef54?auto=format&fit=crop&w=600&q=80" },
-{ name:"Sandwich + Fries + Shake", price:179, category:"Combo", image:"https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" },
-{ name:"Noodles + Manchurian Combo", price:159, category:"Combo", image:"https://images.unsplash.com/photo-1657298848319-5f889a4185c8?auto=format&fit=crop&w=600&q=80" },
-{ name:"Dosa Breakfast Combo", price:129, category:"Combo", image:"https://images.unsplash.com/photo-1630383241307-10cf9c3142e8?auto=format&fit=crop&w=600&q=80" },
-{ name:"South Indian Thali", price:160, category:"Combo", image:"https://images.unsplash.com/photo-1615621283197-e5f1c814a702?auto=format&fit=crop&w=600&q=80" },
-{ name:"Chole Bhature + Lassi", price:145, category:"Combo", image:"https://images.unsplash.com/photo-1616560724690-c9e69cff7785?auto=format&fit=crop&w=600&q=80" },
-{ name:"Maggi + Chai Combo", price:65, category:"Combo", image:"https://images.unsplash.com/photo-1657298837947-247dcae0d36e?auto=format&fit=crop&w=600&q=80" },
-{ name:"Brownie + Ice Cream", price:120, category:"Combo", image:"https://images.unsplash.com/photo-1590086782792-42dd2350140d?auto=format&fit=crop&w=600&q=80" },
-{ name:"Chinese Meal Box", price:199, category:"Combo", image:"https://images.unsplash.com/photo-1657299176883-1e7886934b5b?auto=format&fit=crop&w=600&q=80" },
-{ name:"Mega Party Combo", price:399, category:"Combo", image:"https://images.unsplash.com/photo-1548365328-94689e78c8e3?auto=format&fit=crop&w=600&q=80" },
-{ name:"Date Night Platter", price:299, category:"Combo", image:"https://images.unsplash.com/photo-1604382354936-07c5f2997862?auto=format&fit=crop&w=600&q=80" },
+/* 🔥 COMBOS (12) — using your local images */
+{ name:"Burger + Coke Combo", price:99, category:"Combo", image:"/assets/burger.jpg", description:"Burger + Coke + Perks" },
+{ name:"Pizza + Coke Combo", price:189, category:"Combo", image:"/assets/platter.jpg", description:"Cheesy pizza with chilled coke" },
+{ name:"Sandwich + Fries + Shake", price:179, category:"Combo", image:"/assets/chinese.jpg", description:"Sandwich + Fries + Oreo shake" },
+{ name:"Noodles + Manchurian Combo", price:159, category:"Combo", image:"/assets/maggie.jpg", description:"Best Indo-Chinese plate" },
+{ name:"Dosa Breakfast Combo", price:129, category:"Combo", image:"/assets/southplatter (1).jpg", description:"Dosa + Filter Coffee" },
+{ name:"South Indian Thali", price:160, category:"Combo", image:"/assets/southplatter (7).jpg", description:"Idli, Vada, Dosa, Sambhar" },
+{ name:"Chole Bhature + Lassi", price:145, category:"Combo", image:"/assets/cholebhature.jpg", description:"North Indian special" },
+{ name:"Maggi + Chai Combo", price:65, category:"Combo", image:"/assets/maggie.jpg", description:"Hosteller's favourite combo" },
+{ name:"Brownie + Ice Cream", price:120, category:"Combo", image:"/assets/brownie.jpg", description:"Dessert heaven" },
+{ name:"Chinese Meal Box", price:199, category:"Combo", image:"/assets/chinese.jpg", description:"Rice + Manchurian + Spring roll" },
+{ name:"Mega Party Combo", price:399, category:"Combo", image:"/assets/platter.jpg", description:"2 pizzas + 2 burgers + drinks" },
+{ name:"Date Night Platter", price:299, category:"Combo", image:"/assets/chinese.jpg", description:"Pizza + Shake + Brownie" },
+
 
 ]);
 
